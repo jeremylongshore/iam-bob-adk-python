@@ -1,3 +1,16 @@
+# Release v3.0.0
+
+**Release Date**: 2026-09-19
+
+## Changes since v2.1.8
+
+- chore: release v3.0.0 [skip ci] (34c3695)
+- ci(deps): move GitHub actions off the node20 runtime before its removal (#71) (53672ce)
+- chore(funding): add Ko-fi alongside the existing funding sources (fb5eb08)
+- docs(readme): add the Ko-fi support badge (6712f1f)
+
+---
+
 # Release v2.1.8
 
 **Release Date**: 2026-07-15
