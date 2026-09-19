@@ -26,7 +26,7 @@ jobs:
   drift-check:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
 
       - name: Run drift detection
         run: bash scripts/ci/check_nodrift.sh
@@ -36,10 +36,10 @@ jobs:
     runs-on: ubuntu-latest
     needs: drift-check  # Only run if drift check passes
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
 
       - name: Set up Python
-        uses: actions/setup-python@v5
+        uses: actions/setup-python@v6
         with:
           python-version: '3.11'
 
@@ -74,10 +74,10 @@ jobs:
     runs-on: ubuntu-latest
     needs: drift-check  # Only run if drift check passes
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
 
       - name: Set up Python
-        uses: actions/setup-python@v5
+        uses: actions/setup-python@v6
         with:
           python-version: '3.11'
 
@@ -104,10 +104,10 @@ jobs:
     needs: drift-check  # Only run if drift check passes
     continue-on-error: true  # Non-blocking until proven stable
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
 
       - name: Set up Python
-        uses: actions/setup-python@v5
+        uses: actions/setup-python@v6
         with:
           python-version: '3.11'
 
@@ -126,10 +126,10 @@ jobs:
     runs-on: ubuntu-latest
     needs: drift-check  # Only run if drift check passes
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
 
       - name: Set up Python
-        uses: actions/setup-python@v5
+        uses: actions/setup-python@v6
         with:
           python-version: '3.11'
 
@@ -149,10 +149,10 @@ jobs:
     runs-on: ubuntu-latest
     needs: [drift-check, arv-check, arv-department]  # Only run if drift and ARV checks pass
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
 
       - name: Set up Python
-        uses: actions/setup-python@v5
+        uses: actions/setup-python@v6
         with:
           python-version: '3.11'
 
@@ -180,10 +180,10 @@ jobs:
         python-version: ['3.11', '3.12']
 
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
 
       - name: Set up Python ${{ matrix.python-version }}
-        uses: actions/setup-python@v5
+        uses: actions/setup-python@v6
         with:
           python-version: ${{ matrix.python-version }}
 
@@ -221,7 +221,7 @@ jobs:
 
       - name: Upload coverage
         if: matrix.python-version == '3.12'
-        uses: codecov/codecov-action@v4
+        uses: codecov/codecov-action@v5
         with:
           file: ./coverage.xml
           flags: unittests
@@ -230,10 +230,10 @@ jobs:
     runs-on: ubuntu-latest
     needs: [drift-check, arv-check, arv-department]  # Only run if drift and ARV checks pass
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
 
       - name: Set up Python
-        uses: actions/setup-python@v5
+        uses: actions/setup-python@v6
         with:
           python-version: '3.11'
 
@@ -252,10 +252,10 @@ jobs:
     runs-on: ubuntu-latest
     needs: drift-check  # Only run if drift check passes
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
 
       - name: Setup Terraform
-        uses: hashicorp/setup-terraform@v3
+        uses: hashicorp/setup-terraform@v4
         with:
           terraform_version: 1.6.0
 
@@ -281,7 +281,7 @@ jobs:
     runs-on: ubuntu-latest
     needs: drift-check  # Only run if drift check passes
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
 
       - name: Check required documentation
         run: |
@@ -313,7 +313,7 @@ jobs:
     runs-on: ubuntu-latest
     needs: drift-check
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
 
       - name: Validate canonical structure
         run: |
@@ -351,10 +351,10 @@ jobs:
     needs: drift-check  # Only run if drift check passes
     continue-on-error: true  # Don't fail CI if smoke test fails
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
 
       - name: Set up Python
-        uses: actions/setup-python@v5
+        uses: actions/setup-python@v6
         with:
           python-version: '3.11'
 
@@ -376,7 +376,7 @@ jobs:
 
       - name: Upload LIVE3 Results (if available)
         if: always()
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v7
         with:
           name: live3-smoke-results
           path: |

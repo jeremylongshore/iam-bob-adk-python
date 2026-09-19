@@ -51,10 +51,10 @@ jobs:
 
     steps:
       - name: Checkout code
-        uses: actions/checkout@v4
+        uses: actions/checkout@v7
 
       - name: Set up Python 3.12
-        uses: actions/setup-python@v5
+        uses: actions/setup-python@v6
         with:
           python-version: '3.12'
 
@@ -66,13 +66,13 @@ jobs:
       # PORT3: Design-only authentication (commented out for local-only operation)
       # LIVE1+: Uncomment for actual GCP integration
       # - name: Authenticate to GCP (Workload Identity Federation)
-      #   uses: google-github-actions/auth@v2
+      #   uses: google-github-actions/auth@v3
       #   with:
       #     workload_identity_provider: ${{ secrets.GCP_WORKLOAD_IDENTITY_PROVIDER }}
       #     service_account: ${{ secrets.GCP_SERVICE_ACCOUNT }}
       #
       # - name: Set up Cloud SDK
-      #   uses: google-github-actions/setup-gcloud@v2
+      #   uses: google-github-actions/setup-gcloud@v3
 
       - name: Run ARV portfolio check
         id: arv_check
@@ -121,14 +121,14 @@ jobs:
           echo "FIX_RATE=$FIX_RATE" >> $GITHUB_OUTPUT
 
       - name: Upload portfolio results (JSON)
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v7
         with:
           name: portfolio-results-json
           path: portfolio-results.json
           retention-days: 90
 
       - name: Upload portfolio report (Markdown)
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v7
         with:
           name: portfolio-report-md
           path: portfolio-report.md
