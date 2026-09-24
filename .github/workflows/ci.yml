@@ -159,7 +159,11 @@ jobs:
       - name: Install dependencies
         run: |
           python -m pip install --upgrade pip
-          pip install ruff black mypy
+          # Linters are bounded to one minor series on purpose: an unbounded `ruff`
+          # floated to 0.16, which reports PLR0917, and turned main red with no change
+          # in this repo (2026-09). Raise the bounds deliberately, in a PR that fixes
+          # whatever the new series reports.
+          pip install "ruff>=0.16,<0.17" "black>=26.5,<26.6" "mypy>=2.3,<2.4"
 
       - name: Lint with ruff
         run: ruff check agents/ service/ scripts/ tests/

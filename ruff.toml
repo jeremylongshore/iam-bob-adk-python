@@ -133,6 +133,10 @@ ignore = [
     "PT011",
     # Pytest raises ambiguous pattern
     "RUF043",
+    # Too many positional arguments (stable in ruff 0.16). The flagged functions
+    # are ADK tool signatures and test factories whose positional call surface is
+    # part of the frozen v1 contract; making them keyword-only would change it.
+    "PLR0917",
 ]
 
 [lint.per-file-ignores]

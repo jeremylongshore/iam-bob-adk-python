@@ -27,11 +27,10 @@ on:
         required: false
         default: false
         type: boolean
-  push:
-    branches: [main]
-    paths:
-      - 'mcp/**'
-      - '.github/workflows/deploy-mcp.yml'
+  # push trigger removed 2026-09-24: this v1 repo is frozen (superseded by
+  # iam-bob-pydantic) and the GCP estate it deploys to was torn down on
+  # 2026-07-09, so every path-matching push produced a failed deploy run.
+  # Manual dispatch is kept for the historical record only.
 
 permissions:
   contents: read
