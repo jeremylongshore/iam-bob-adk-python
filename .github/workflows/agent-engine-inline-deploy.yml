@@ -33,13 +33,10 @@ on:
         type: boolean
         default: false
 
-  push:
-    branches:
-      - main
-    paths:
-      - 'agents/**'
-      - 'requirements.txt'
-      - '.github/workflows/agent-engine-inline-deploy.yml'
+  # push trigger removed 2026-09-24: this v1 repo is frozen (superseded by
+  # iam-bob-pydantic) and the GCP estate it deploys to was torn down on
+  # 2026-07-09, so every path-matching push produced a failed deploy run.
+  # Manual dispatch is kept for the historical record only.
 
 permissions:
   contents: read
