@@ -1,3 +1,14 @@
+# Release v3.0.3
+
+**Release Date**: 2026-09-24
+
+## Changes since v3.0.2
+
+- chore: release v3.0.3 [skip ci] (e138064)
+- fix(ci): bound the linters, ignore PLR0917, and stop GCP deploys firing on push (#74) (62e78c7)
+
+---
+
 # Release v3.0.2
 
 **Release Date**: 2026-09-24
