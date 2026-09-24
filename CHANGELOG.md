@@ -1,3 +1,14 @@
+# Release v3.0.2
+
+**Release Date**: 2026-09-24
+
+## Changes since v3.0.1
+
+- chore: release v3.0.2 [skip ci] (5662961)
+- docs: freeze v1 (ADK era) — superseded by bobs-brain-v2 (#69) (a3fd554)
+
+---
+
 # Release v3.0.1
 
 **Release Date**: 2026-09-20
