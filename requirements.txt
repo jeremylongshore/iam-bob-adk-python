@@ -47,7 +47,7 @@ pip-audit>=2.6.0  # Dependency vulnerability scanning
 
 # Testing - Extended
 pytest-xdist>=3.5.0  # Parallel test execution
-pytest-rerunfailures>=13.0  # Flaky test detection and rerun
+pytest-rerunfailures>=16.7  # Flaky test detection and rerun
 respx>=0.21.0  # HTTP record/replay for httpx
 
 # Crawler dependencies (tools/)
