@@ -30,7 +30,7 @@ python-dotenv>=1.0.0  # Environment variable management
 # Observability (R7: SPIFFE propagation)
 opentelemetry-api>=1.21.0  # OpenTelemetry SDK
 opentelemetry-sdk>=1.21.0
-opentelemetry-exporter-gcp-trace>=1.5.0  # Google Cloud Trace
+opentelemetry-exporter-gcp-trace>=1.15.0  # Google Cloud Trace
 
 # Development & Testing
 pytest>=7.4.0  # Testing framework
