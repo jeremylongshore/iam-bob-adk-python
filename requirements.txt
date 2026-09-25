@@ -24,7 +24,7 @@ uvicorn[standard]>=0.24.0  # ASGI server
 
 # Slack integration (optional - for service/slack_webhook/)
 slack-sdk>=3.23.0  # Slack Bot API
-slack-bolt>=1.18.0  # Slack event handling
+slack-bolt>=1.30.0  # Slack event handling
 python-dotenv>=1.0.0  # Environment variable management
 
 # Observability (R7: SPIFFE propagation)
