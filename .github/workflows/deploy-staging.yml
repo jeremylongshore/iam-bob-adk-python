@@ -58,7 +58,7 @@ jobs:
         run: |
           python -m pip install --upgrade pip
           pip install -r requirements.txt
-          pip install pytest
+          pip install 'pytest==9.1.1'
 
       - name: Run ARV Department Check (Staging)
         run: |
