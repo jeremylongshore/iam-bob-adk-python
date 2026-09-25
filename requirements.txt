@@ -17,7 +17,7 @@ google-auth>=2.23.0  # Authentication for GCP services
 google-cloud-logging>=3.8.0  # Structured logging
 
 # Gateway dependencies (service/)
-fastapi>=0.104.0  # A2A gateway HTTP endpoints (R3: proxy only)
+fastapi>=0.141.1  # A2A gateway HTTP endpoints (R3: proxy only)
 httpx>=0.25.0  # Async HTTP client for Agent Engine REST API
 pydantic>=2.4.0  # Request/response models
 uvicorn[standard]>=0.24.0  # ASGI server
