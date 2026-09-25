@@ -61,7 +61,7 @@ jobs:
         run: |
           python -m pip install --upgrade pip
           pip install -r mcp/requirements.txt
-          pip install pytest pytest-asyncio
+          pip install 'pytest==9.1.1' 'pytest-asyncio==1.4.0'
 
       - name: Run MCP tests
         working-directory: mcp
