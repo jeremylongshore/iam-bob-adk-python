@@ -1,3 +1,14 @@
+# Release v3.0.4
+
+**Release Date**: 2026-09-25
+
+## Changes since v3.0.3
+
+- chore: release v3.0.4 [skip ci] (6fae8c2)
+- ci(deps): pin the linters and test dependencies CI installs unpinned (#75) (7ccb1fb)
+
+---
+
 # Release v3.0.3
 
 **Release Date**: 2026-09-24
