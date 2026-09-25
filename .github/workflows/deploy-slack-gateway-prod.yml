@@ -196,7 +196,7 @@ jobs:
           terraform init -backend-config="bucket=bobs-brain-terraform-state"
 
       - name: Download Plan Artifact
-        uses: actions/download-artifact@v7
+        uses: actions/download-artifact@v8
         with:
           name: terraform-plan-slack-gateway-prod
           path: ${{ env.TERRAFORM_DIR }}
